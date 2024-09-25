@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-   public static void main(String[] args) {
+       public static void main(String[] args) {
        Scanner scanner=new Scanner(System.in);
        System.out.println("Give dollar amount:");
        double bill=(double)scanner.nextDouble();
@@ -16,6 +16,9 @@ public class Main {
        double totalPerson=bill/people; //totalPerson means how much each person has to pay for total bill
 
        tip=((int)(tip*100))/(double)100; //three more
+       bill=((int)(bill*100))/(double)100;
+       tipPerson=((int)(tipPerson*100))/(double)100;
+       totalPerson=((int)(totalPerson*100))/(double)100;
 
 
        System.out.println(tip);
