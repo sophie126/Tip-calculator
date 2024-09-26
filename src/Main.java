@@ -3,20 +3,20 @@ public class Main {
        public static void main(String[] args) {
        System.out.println("***Do not use symbols***");
        Scanner scanner=new Scanner(System.in);
-       System.out.print("Give dollar amount: ");
+       System.out.print("Bill amount: ");
        double bill=(double)scanner.nextDouble();
-       System.out.print("Give tip percentage as a whole number without the symbol: ");
+       System.out.print("Tip percentage as a whole number: ");
        double tipPercent=scanner.nextDouble();
-       System.out.print("Give number of people: ");
-       int people=scanner.nextInt();
+       System.out.print("Number of people: ");
+       int people=scanner.nextInt(); //scanner
 
-       tipPercent=tipPercent/100;
-       double tip=bill*tipPercent;
-       bill=bill+tip;
+       tipPercent=tipPercent/100; //turning to percent
+       double tip=bill*tipPercent; //tip based on bill
+       bill=bill+tip; //total bill
        double tipPerson=tip/people; //tipPerson means tip per person
        double totalPerson=bill/people; //totalPerson means how much each person has to pay for total bill
 
-       tip=((int)(tip*100))/(double)100; //three more
+       tip=((int)(tip*100))/(double)100; //rounding
        bill=((int)(bill*100))/(double)100;
        tipPerson=((int)(tipPerson*100))/(double)100;
        totalPerson=((int)(totalPerson*100))/(double)100;
